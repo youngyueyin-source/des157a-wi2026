@@ -13,21 +13,21 @@ body{
 #container{
     max-width: 1200px;
     min-width: 900px;
-    margin: 60px auto;
+    margin: 50px auto;
     padding: 20px;
-    background: rgba(11, 20, 17, 0.45);
+    background: rgba(11, 20, 17, 0.25);
     border-radius: 24px;
 }
 
 
 header{
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 header h1{
-  margin: 0 0 8px;
-  font-family: "Cormorant Garamond", serif;
+    margin: 0 0 8px;
+    font-family: "Cormorant Garamond", serif;
   font-size: 48px;
 }
 
@@ -66,11 +66,9 @@ main{
 
 main section{
   flex: 1;
-  padding: 16px;
-
+  padding: 25px;
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(231,241,234,0.18);
-  border-radius: 18px;
+  border-radius: 10px;
 }
 
 
@@ -103,22 +101,20 @@ a:hover{
 
 
 footer{
-  margin-top: 25px;
   line-height: 30px;
   text-align: center;
-  padding: 20px 0px 30px;
-  border-top: 1px solid rgba(231,241,234,0.2);
 }
 
 footer a{
   padding: 10px 14px;
   border-radius: 14px;
   background: rgba(11,20,17,0.6);
-  border: 1px solid rgba(231,241,234,0.2);
 }
 
 footer a:hover{
-  border-color: rgba(231,241,234,0.5);
+  background: red;
+  color:#0b1411;
+  font-weight: bolder;
 }
 
 .floating-banner{
