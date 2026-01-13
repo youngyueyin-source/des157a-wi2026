@@ -120,3 +120,18 @@ footer a{
 footer a:hover{
   border-color: rgba(231,241,234,0.5);
 }
+
+.floating-banner{
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
