@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    
+    <h1>Experiment 1</h1>
+    <h2>Please open the console to see the functionality of my code.</h2>
+
+<!-- here i added the script tag that takes my lowercase sentence and made it capitalize the first letter of every word and prints it on the console. -->
+
+    <script>
+
+        var lowerCase = "my name is jade young";
+    // sequence: splits it into an array
+        var words = lowerCase.split(" ");
+        var result = "";
+
+        // loop: repeats code for each word in the array
+        for (var i = 0; i < words.length; i++) {
+
+            
+            if (words[i].length > 0) {
+            var firstLetter = words[i].charAt(0).toUpperCase();
+            var rest = words[i].slice(1);
+            result = result + firstLetter + rest + " ";
+            }
+        }
+
+        console.log(result.trim());
+
+
+    </script>
+
+</body>
+</html>
