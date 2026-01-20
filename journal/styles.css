@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(102, 53, 18);
+}
+
+h1 {
+    color: aliceblue;
+    background: rgb(1, 46, 1);
+    margin: 50px 500px;
+    padding: 30px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+a {
+    color: red;
+}
+
+article {
+    background-color: aliceblue;
+    margin: 100px 450px;
+    padding: 20px 50px;
+    box-shadow: 10px 10px 0 10px #E3E3D4;
+}
+
+p {
+    line-height: 1.6em;
+    font-size: 1.3em;
+}
+
+p, time {
+    color:rgb(37, 0, 0);
+}
+
+h2 {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    background-color: #E3E3D4;
+}
