@@ -38,11 +38,11 @@
 
             // checks if the user guessed the same color as the computer. if correct it displays a correct message on the screen
             if(guess === answer){
-                document.getElementById("text").innerHTML = "you're right.";
+                document.querySelector("#text").innerHTML = "you're right.";
             }
             // if not it will display a wrong message.
             else{
-                document.getElementById("text").innerHTML = "wrong. the color was " + answer;
+                document.querySelector("#text").innerHTML = "wrong. the color was " + answer;
 
             }
             // changes background to correct color.
