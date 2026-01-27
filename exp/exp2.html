@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="text"></h1>
+
+    <script>
+        // this is an array
+        var colors = ["red", "blue", "pink", "yellow"];
+        
+        // this is a random color function.
+        function getRandomColor(){
+            // Math.random() gives a random decimal betwen 0-1. colors.length scales it to the array. Math.floor() rounds it down to a whole number. return colors[number] picks a random color.
+            var number = Math.floor(Math.random() * colors.length);
+            return colors[number];
+        }
+
+        // this function runs the color guessing game
+        function showResult(){
+
+            // asks user to picka. color and gets their answer in guess
+            var guess = prompt("guess a color: red, blue, pink, or yellow");
+            // calls the previous function and sotres the computers color in answer
+            var answer = getRandomColor();
+
+            // checks if the user guessed the same color as the computer. if correct it displays a correct message on the screen
+            if(guess === answer){
+                document.getElementById("text").innerHTML = "you're right.";
+            }
+            // if not it will display a wrong message.
+            else{
+                document.getElementById("text").innerHTML = "wrong. the color was " + answer;
+
+            }
+            // changes background to correct color.
+            document.body.style.backgroundColor = answer;
+        }
+        // runs the program
+        showResult();
+    </script>
+
+</body>
+</html>
