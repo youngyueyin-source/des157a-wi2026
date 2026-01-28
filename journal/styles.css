@@ -1,14 +1,15 @@
 body {
-    background-color: rgb(102, 53, 18);
+    background: url("images/deskbackground.jpg") center top no-repeat, #0b1411;
 }
 
 h1 {
     color: aliceblue;
     background: rgb(1, 46, 1);
-    margin: 50px 500px;
-    padding: 30px;
+    margin: 50px auto;
+    max-width: 600px;
     border-radius: 50px;
     text-align: center;
+    padding: 15px;
 }
 
 a {
@@ -17,14 +18,14 @@ a {
 
 article {
     background-color: aliceblue;
-    margin: 100px 450px;
     padding: 20px 50px;
     box-shadow: 10px 10px 0 10px #E3E3D4;
+    width: 420px;
 }
 
 p {
     line-height: 1.6em;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 p, time {
@@ -37,5 +38,45 @@ h2 {
 
 nav {
     text-align: center;
-    background-color: #E3E3D4;
+    text-decoration: none;
+}
+
+nav a{
+    font-size: 1.5em;
+}
+nav a:hover {
+    color:antiquewhite;
+}
+
+.posts {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px;
+}
+
+
+.floating-banner{
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+a{
+    color: red;
+    text-decoration: none;
 }
