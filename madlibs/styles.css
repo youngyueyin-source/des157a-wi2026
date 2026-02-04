@@ -6,7 +6,7 @@ body{
 	margin: 0;
 	font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 	color: #111;
-    background-color: #dddcdc;
+	background-color: #dddcdc;
 }
 
 body > *{
@@ -20,16 +20,13 @@ body > *{
 h1{
 	margin: 24px auto 8px;
 	font-size: 40px;
-	letter-spacing: -0.02em;
-    text-align: center;
+	text-align: center;
 }
 
 h2{
 	margin: 0 auto 18px;
 	font-weight: 500;
-	line-height: 1.25;
-	color: #2a2a2a;
-    text-align: center;
+	text-align: center;
 }
 
 .card{
@@ -44,7 +41,7 @@ h2{
 .top-title{
 	text-align: center;
 	font-weight: 700;
-	margin: 0 0 14px;
+	margin-bottom: 14px;
 }
 
 .head{
@@ -57,14 +54,12 @@ h2{
 .avatar{
 	width: 56px;
 	height: 56px;
-	border-radius: 999px;
+	border-radius: 50%;
 	background: #7ea98a;
-	flex-shrink: 0;
 }
 
 .name{
 	font-weight: 800;
-	font-size: 18px;
 }
 
 .sub{
@@ -82,40 +77,30 @@ h2{
 
 .prompt{
 	font-size: 22px;
-	margin: 10px 0 12px;
+	margin-bottom: 12px;
 }
 
-.form label{
+form label{
 	display: block;
-	margin: 12px 0;
-	font-size: 14px;
+	margin-top: 12px;
 }
 
-.form input{
-	display: block;
+form input{
 	width: 100%;
-	margin-top: 8px;
 	padding: 12px;
-	font-size: 15px;
+	margin-top: 6px;
 	border-radius: 12px;
 	border: 1.5px solid #d7d7d7;
 }
 
-.form input:focus{
-	outline: none;
-	border-color: rgba(47,109,246,.6);
-	box-shadow: 0 0 0 4px rgba(47,109,246,.12);
-}
-
-
 .actions{
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	gap: 12px;
+	align-items: center;
+	margin-top: 16px;
 	border-top: 2px solid #bebebe;
-	padding-top: 15px;
-	margin-top: 14px;
+	padding-top: 14px;
+	gap: 10px;
 	flex-wrap: wrap;
 }
 
@@ -128,159 +113,103 @@ h2{
 	cursor: pointer;
 }
 
-.btn.ghost{
-	color: #7a7a7a;
-    padding: 10px 25px;
-    font-size: 1.2em;
-}
-
 .btn.post{
 	background: #2f6df6;
-	border-color: #2f6df6;
 	color: #fff;
-    font-size: 1.4em;
-    padding: 10px 25px;
+	border-color: #2f6df6;
 }
 
 .icon-row{
 	display: flex;
-	gap: 10px;
+	gap: 8px;
 }
 
 .icon-btn{
-	width: 40px;
-	height: 40px;
-	background: transparent;
+	background: none;
 	border: none;
-	border-radius: 12px;
 	cursor: pointer;
-	display: grid;
-	place-items: center;
 }
 
 .icon{
-	width: 22px;
-	height: 22px;
+	width: 28px;
+	height: 28px;
 }
 
-.modal{
+#error{
+	margin-top: 10px;
+	color: red;
+	font-weight: 700;
+}
+
+#madlib-overlay{
 	position: fixed;
 	inset: 0;
 	display: none;
 	place-items: center;
+	background: rgba(0,0,0,.5);
 	padding: 18px;
-	z-index: 50;
-}
-
-.modal.open{
-	display: grid;
-}
-
-.backdrop{
-	position: absolute;
-	inset: 0;
-	background: rgba(0,0,0,.25);
 }
 
 .modal-card{
-	position: relative;
-	width: min(520px, 100%);
-	max-height: 80vh;
-	overflow: auto;
-	box-shadow: 0 8px 30px rgba(0,0,0,.12);
+	max-width: 520px;
 }
 
 .post-text{
-	font-size: 16px;
-	line-height: 1.45;
 	margin: 10px 0;
+	line-height: 1.5;
 }
 
-.close{
-    margin-top: 10px;
+.post-actions{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 14px;
+	font-size: 14px;
+	color: #555;
 }
 
-@media (max-width: 520px){
+#like-btn{
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
 
-	body > *{
-		padding-left: 14px;
-		padding-right: 14px;
-	}
+.heart{
+	font-size: 20px;
+	color: #999;
+	transition: color 0.2s ease, transform 0.1s ease;
+	line-height: 1;  
+}
 
-	h1{
-		font-size: 32px;
-		margin-top: 18px;
-	}
+#like-btn:hover .heart{
+	color: #e0245e;
+}
 
-	h2{
-		font-size: 16px;
-		line-height: 1.35;
-		margin-bottom: 14px;
-	}
+#like-btn.liked .heart{
+	color: #e0245e;
+	transform: scale(1.15);
+}
 
-	.card{
-		padding: 14px;
-		border-radius: 16px;
-	}
+.post-footer{
+	border-top: 1px solid grey;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 14px;
+}
 
-	.prompt{
-		font-size: 18px;
-	}
+#close{
+	margin-top: 14px;
+	font-size: 14px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #2f6df6;
+	line-height: 1;              
+}
 
-	.avatar{
-		width: 48px;
-		height: 48px;
-	}
-
-	.name{
-		font-size: 16px;
-	}
-
-	.sub{
-		font-size: 12px;
-	}
-
-	.actions{
-		display: grid;
-		grid-template-columns: auto 1fr;
-		grid-template-areas:
-			"rewrite icons"
-			"post post";
-		gap: 10px;
-	}
-
-	.btn.ghost{
-		grid-area: rewrite;
-	}
-
-	.icon-row{
-		grid-area: icons;
-		justify-self: end;
-	}
-
-	.btn.post{
-		grid-area: post;
-		width: 100%;
-		padding: 12px 14px;
-	}
-
-	.icon-btn{
-		width: 44px;
-		height: 44px;
-	}
-
-	.modal{
-		padding: 14px;
-	}
-
-	.modal-card{
-		width: 100%;
-		border-radius: 18px;
-		max-height: 82vh;
-	}
-
-	.post-text{
-		font-size: 15px;
-		line-height: 1.5;
-	}
+#close:hover{
+	text-decoration: underline;
 }

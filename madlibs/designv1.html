@@ -1,115 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LinkedOut Mad Lib</title>
-  <link rel="stylesheet" href="styles.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LinkedOut Mad Lib</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="script.js" defer></script>
 </head>
 <body>
 
-    <h1>Congratulations!</h1>
-    <h2>You've landed a job.</h2>
+	<h1>Congratulations!</h1>
+	<h2>You've landed a job.</h2>
 
-    <section class="card">
+	<section class="card">
 
-        <p class="top-title">Time to make a <em>LinkedOut</em> post! Tell us about your (fictional) position.</p>
+		<p class="top-title">
+			Time to make a <em>LinkedOut</em> post! Tell us about your (fictional) position.
+		</p>
 
-        <div class="head">
+		<div class="head">
+			<div class="avatar"></div>
 
-            <div class="avatar"></div>
+			<div>
+				<div class="name">Current User</div>
+				<div class="sub">
+					Post to anyone •
+					<img class="mini" src="images/icons/earthicon.png" alt="earth icon">
+				</div>
+			</div>
+		</div>
 
-            <div>
-                <div class="name">Current User</div>
-                <div class="sub">Post to anyone <img class="mini" src="images/icons/globe.png" alt=""></div>
-            </div>
+		<p class="prompt">Share your thoughts...</p>
 
-        </div>
+		<form id="form">
 
-        <p class="prompt">Share your thoughts...</p>
+			<label for="adjective">1. Adjective:</label>
+			<input type="text" id="adjective">
 
-        <form class="form">
+			<label for="verb">2. Verb ending in “ing”:</label>
+			<input type="text" id="verb">
 
-            <label>1. Adjective: <input name="adjective" required></label>
+			<label for="jobTitle">3. Job title:</label>
+			<input type="text" id="jobTitle">
 
-            <label>2. Verb ending in “ing”: <input name="verbIng" required></label>
+			<label for="companyName">4. Company name:</label>
+			<input type="text" id="companyName">
 
-            <label>3. Job title: <input name="jobTitle" required></label>
+			<label for="industry">5. Industry:</label>
+			<input type="text" id="industry">
 
-            <label>4. Company name: <input name="companyName" required></label>
+			<label for="skill">6. Skill:</label>
+			<input type="text" id="skill">
 
-            <label>5. Industry: <input name="industry" required></label>
+			<label for="buzzword">7. Buzzword noun:</label>
+			<input type="text" id="buzzword">
 
-            <label>6. Skill: <input name="skill" required></label>
+			<label for="emoji">8. Emoji:</label>
+			<input type="text" id="emoji">
 
-            <label>7. Buzzword noun: <input name="buzzword" required></label>
+			<div class="actions">
 
-            <label>8. Emoji: <input name="emoji" required></label>
+				<button class="btn ghost" type="button">Rewrite with AI</button>
 
-            <div class="actions">
+				<div class="icon-row">
+					<button class="icon-btn" type="button">
+						<img class="icon" src="images/icons/plusicon.png" alt="plus icon">
+					</button>
+					<button class="icon-btn" type="button">
+						<img class="icon" src="images/icons/imagesicon.png" alt="camera roll icon">
+					</button>
+					<button class="icon-btn" type="button">
+						<img class="icon" src="images/icons/smileicon.png" alt="smile icon">
+					</button>
+				</div>
 
-                <button class="btn ghost" type="button">Rewrite with AI</button>
+				<button class="btn post" type="submit">Post</button>
 
-                    <div class="icon-row">
-                        <button class="icon-btn" type="button"><img class="icon" src="images/icons/plus.png" alt=""></button>
-                        <button class="icon-btn" type="button"><img class="icon" src="images/icons/photo.png" alt=""></button>
-                        <button class="icon-btn" type="button"><img class="icon" src="images/icons/smiley.png" alt=""></button>
-                    </div>
+			</div>
 
-                <button class="btn post" type="submit">Post</button>
+		</form>
 
-            </div>
+		<div id="error"></div>
 
-        </form>
+	</section>
 
-    </section>
+	<section id="madlib-overlay">
 
-  <!-- overlay hidden until adding open after modal-->
-    <section class="modal">
+		<article class="card modal-card">
 
-        <div class="backdrop"></div>
+			<div class="head">
+				<div class="avatar"></div>
 
-        <article class="card modal-card">
+				<div>
+					<div class="name">Current User</div>
+					<div class="sub">
+						1h •
+						<img class="mini" src="images/icons/earthicon.png" alt="earth icon">
+					</div>
+				</div>
+			</div>
 
-            <div class="head">
+            <div id="madlib"></div>
 
-                <div class="avatar"></div>
+            <div class="post-footer">
 
-                <div>
-                    <div class="name">Current User</div>
-                    <div class="sub">1h • <img class="mini" src="images/icons/globe.png" alt=""></div>
+                <div class="post-actions">
+                    <button id="like-btn" type="button">
+                        <span class="heart">♥</span>
+                    </button>
+                    <span id="like-count">0</span> likes
                 </div>
 
+                <a href="#" id="close">Close</a>
+
             </div>
 
-            <p class="post-text">
+		</article>
 
-                I'm <span class="fill adjective">adjective</span> to share that I'll be
-                <span class="fill verbIng">verb-ing</span> as a
-                <span class="fill jobTitle">job title</span> at
-                <span class="fill companyName">company</span> in the
-                <span class="fill industry">industry</span> space.
-
-            </p>
-
-            <p class="post-text">
-
-                I can't wait to use my <span class="fill skill">skill</span> to help build real
-                <span class="fill buzzword">buzzword</span> with an amazing team.
-
-            </p>
-
-            <p class="post-text">
-
-                Lets go <span class="fill emoji">emoji</span>
-
-            </p>
-
-            <button class="btn close" type="button">Close</button>
-
-        </article>
-
-    </section>
+	</section>
 
 </body>
 </html>
