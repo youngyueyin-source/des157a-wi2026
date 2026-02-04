@@ -59,20 +59,35 @@
 			document.querySelector('#emoji').focus();
 		}
 		else{
-			myText = `
-				<p class="post-text">
-					I'm <span>${adjective}</span> to share that I'll be <span>${verb}</span> as a
-					<span>${jobTitle}</span> at <span>${companyName}</span> in the
-					<span>${industry}</span> space.
-				</p>
-				<p class="post-text">
-					I can't wait to use my <span>${skill}</span> to help build real
-					<span>${buzzword}</span> with an amazing team.
-				</p>
-				<p class="post-text">
-					Let's go! <span>${emoji}</span>
-				</p>
-			`;
+            
+            myText = `
+            <p class="post-text">
+                Feeling grateful and excited as I step into a new opportunity.
+            </p>
+
+            <p class="post-text">
+                I'm <span>${adjective}</span> to share that I'll be <span>${verb}</span> as a
+                <span>${jobTitle}</span> at <span>${companyName}</span> in the
+                <span>${industry}</span> space.
+            </p>
+
+            <p class="post-text">
+                Every step along the way has been a learning experience, and I’m thankful for the people who believed in me.
+            </p>
+
+            <p class="post-text">
+                I can't wait to use my <span>${skill}</span> to help build real
+                <span>${buzzword}</span> with an amazing team.
+            </p>
+
+            <p class="post-text">
+                Excited to see where this journey leads.
+            </p>
+
+            <p class="post-text">
+                Let's go! <span>${emoji}</span>
+            </p>
+            `;
 
 			form.reset();
 			errorMessage.innerHTML = '';
