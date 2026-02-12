@@ -1,12 +1,15 @@
-*{
-	box-sizing: border-box;
-}
+*{ box-sizing: border-box; }
 
 body{
 	margin: 0;
-	font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+	font-family: system-ui, Arial, sans-serif;
 	color: #111;
-	background-color: #dddcdc;
+
+	background: url("images/madlibbackground.jpg") center top no-repeat, #0b1411;
+	background-size: cover;
+
+	position: relative;
+	min-height: 100vh;
 }
 
 body > *{
@@ -18,37 +21,59 @@ body > *{
 }
 
 h1{
-	margin: 24px auto 8px;
+	margin: 20px auto;
 	font-size: 40px;
 	text-align: center;
+	color: #fff;
 }
 
 h2{
-	margin: 0 auto 18px;
+	margin: 0 auto;
 	font-weight: 500;
 	text-align: center;
+	color: #fff;
+}
+
+.laptop{
+	position: absolute;
+	top: 0;       
+	left: 50%;
+	transform: translateX(-51.5%);
+	width: 85vw;
+	max-width: 1200px;
+	max-height: 980px;
+	z-index: -1;
+	pointer-events: none;
+}
+
+.screen{
+	position: relative;
+	margin-top: 92px;
 }
 
 .card{
 	width: 100%;
 	border: 2px solid #d7d7d7;
 	border-radius: 14px;
-	padding: 18px;
+	padding: 26px 18px 18px 18px;
 	background: #fff;
-	margin-bottom: 24px;
+	margin: 0 0 24px 0;
+
+	position: relative;
+	z-index: 1;
 }
 
 .top-title{
 	text-align: center;
 	font-weight: 700;
-	margin-bottom: 14px;
+	margin-bottom: 12px;
 }
 
 .head{
 	display: flex;
 	align-items: center;
 	gap: 14px;
-	margin-bottom: 12px;
+	margin-bottom: 10px;
 }
 
 .avatar{
@@ -58,9 +83,7 @@ h2{
 	background: #7ea98a;
 }
 
-.name{
-	font-weight: 800;
-}
+.name{ font-weight: 800; }
 
 .sub{
 	font-size: 13px;
@@ -76,20 +99,27 @@ h2{
 }
 
 .prompt{
-	font-size: 22px;
-	margin-bottom: 12px;
+	font-size: 20px;
+	margin-bottom: 10px;
 }
 
-form label{
+.form-grid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px 18px;
+	margin-top: 10px;
+}
+
+.field label{
 	display: block;
-	margin-top: 12px;
+	font-size: 14px;
+	margin-bottom: 4px;
 }
 
-form input{
+.field input{
 	width: 100%;
-	padding: 12px;
-	margin-top: 6px;
-	border-radius: 12px;
+	padding: 8px 10px;
+	border-radius: 10px;
 	border: 1.5px solid #d7d7d7;
 }
 
@@ -97,9 +127,9 @@ form input{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 16px;
+	margin-top: 14px;
 	border-top: 2px solid #bebebe;
-	padding-top: 14px;
+	padding-top: 12px;
 	gap: 10px;
 	flex-wrap: wrap;
 }
@@ -142,16 +172,23 @@ form input{
 }
 
 #madlib-overlay{
-	position: fixed;
+	position: absolute;
 	inset: 0;
 	display: none;
-	place-items: center;
-	background: rgba(0,0,0,.5);
+	align-items: center;
+	justify-content: center;
+
+	background: rgba(0,0,0,.55);
+	border-radius: 14px;
+	overflow: hidden;   
 	padding: 18px;
+	z-index: 10;
 }
 
 .modal-card{
 	max-width: 520px;
+	margin: 0;       
+	z-index: 20;
 }
 
 .post-text{
@@ -181,12 +218,10 @@ form input{
 	font-size: 20px;
 	color: #999;
 	transition: color 0.2s ease, transform 0.1s ease;
-	line-height: 1;  
+	line-height: 1;
 }
 
-#like-btn:hover .heart{
-	color: #e0245e;
-}
+#like-btn:hover .heart{ color: #e0245e; }
 
 #like-btn.liked .heart{
 	color: #e0245e;
@@ -207,9 +242,7 @@ form input{
 	font-weight: 700;
 	text-decoration: none;
 	color: #2f6df6;
-	line-height: 1;              
+	line-height: 1;
 }
 
-#close:hover{
-	text-decoration: underline;
-}
+#close:hover{ text-decoration: underline; }
