@@ -1,152 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>LinkedOut Mad Lib</title>
-	<link rel="stylesheet" href="styles.css" />
+	<link rel="stylesheet" href="v1.css">
 	<script src="script.js" defer></script>
 </head>
 <body>
 
-	<!-- Laptop frame behind everything -->
-	<img src="images/laptop.png" alt="Laptop frame" class="laptop" />
-
 	<h1>Congratulations!</h1>
 	<h2>You've landed a job.</h2>
 
-	<!-- SCREEN WRAPPER (card + overlay live inside this) -->
-	<div class="screen">
+	<section class="card">
 
-		<section class="card">
+		<p class="top-title">
+			Time to make a <em>LinkedOut</em> post! Tell us about your (fictional) position.
+		</p>
 
-			<p class="top-title">
-				Time to make a <em>LinkedOut</em> post! Tell us about your (fictional) position.
-			</p>
+		<div class="head">
+			<div class="avatar"></div>
+			<div>
+				<div class="name">Current User</div>
+				<div class="sub">
+					Post to anyone •
+					<img class="mini" src="images/icons/earthicon.png" alt="earth icon">
+				</div>
+			</div>
+		</div>
+
+		<p class="prompt">Share your thoughts...</p>
+
+		<form id="form">
+
+			<label for="adjective">1. Adjective:</label>
+			<input type="text" id="adjective">
+
+			<label for="verb">2. Verb ending in “ing”:</label>
+			<input type="text" id="verb">
+
+			<label for="jobTitle">3. Job title:</label>
+			<input type="text" id="jobTitle">
+
+			<label for="companyName">4. Company name:</label>
+			<input type="text" id="companyName">
+
+			<label for="industry">5. Industry:</label>
+			<input type="text" id="industry">
+
+			<label for="skill">6. Skill:</label>
+			<input type="text" id="skill">
+
+			<label for="buzzword">7. Buzzword noun:</label>
+			<input type="text" id="buzzword">
+
+			<label for="emoji">8. Emoji:</label>
+			<input type="text" id="emoji">
+
+			<div class="actions">
+
+				<button class="btn ghost" type="button">Rewrite with AI</button>
+
+				<div class="icon-row">
+					<button class="icon-btn" type="button">
+						<img class="icon" src="images/icons/plusicon.png" alt="plus icon">
+					</button>
+					<button class="icon-btn" type="button">
+						<img class="icon" src="images/icons/imagesicon.png" alt="camera roll icon">
+					</button>
+					<button class="icon-btn" type="button">
+						<img class="icon" src="images/icons/smileicon.png" alt="smile icon">
+					</button>
+				</div>
+
+				<button class="btn post" type="submit">Post</button>
+
+			</div>
+
+		</form>
+
+		<div id="error"></div>
+
+	</section>
+
+	<section id="madlib-overlay">
+
+		<article class="card modal-card">
 
 			<div class="head">
 				<div class="avatar"></div>
-
 				<div>
 					<div class="name">Current User</div>
 					<div class="sub">
-						Post to anyone •
-						<img class="mini" src="images/icons/earthicon.png" alt="earth icon" />
+						1 min •
+						<img class="mini" src="images/icons/earthicon.png" alt="earth icon">
 					</div>
 				</div>
 			</div>
 
-			<p class="prompt">Share your thoughts...</p>
+			<div id="madlib"></div>
 
-			<form id="form">
+			<div class="post-footer">
 
-				<div class="form-grid">
-
-					<div class="field">
-						<label for="adjective">1. Adjective:</label>
-						<input type="text" id="adjective" />
-					</div>
-
-					<div class="field">
-						<label for="verb">2. Verb ending in “ing”:</label>
-						<input type="text" id="verb" />
-					</div>
-
-					<div class="field">
-						<label for="jobTitle">3. Job title:</label>
-						<input type="text" id="jobTitle" />
-					</div>
-
-					<div class="field">
-						<label for="companyName">4. Company name:</label>
-						<input type="text" id="companyName" />
-					</div>
-
-					<div class="field">
-						<label for="industry">5. Industry:</label>
-						<input type="text" id="industry" />
-					</div>
-
-					<div class="field">
-						<label for="skill">6. Skill:</label>
-						<input type="text" id="skill" />
-					</div>
-
-					<div class="field">
-						<label for="buzzword">7. Buzzword noun:</label>
-						<input type="text" id="buzzword" />
-					</div>
-
-					<div class="field">
-						<label for="emoji">8. Emoji:</label>
-						<input type="text" id="emoji" />
-					</div>
-
+				<div class="post-actions">
+					<button id="like-btn" type="button">
+						<span class="heart">♥</span>
+					</button>
+					<span id="like-count">0</span> likes
 				</div>
 
-				<div class="actions">
+				<a href="#" id="close">Close</a>
 
-					<button class="btn ghost" type="button">Rewrite with AI</button>
+			</div>
 
-					<div class="icon-row">
-						<button class="icon-btn" type="button">
-							<img class="icon" src="images/icons/plusicon.png" alt="plus icon" />
-						</button>
-						<button class="icon-btn" type="button">
-							<img class="icon" src="images/icons/imagesicon.png" alt="camera roll icon" />
-						</button>
-						<button class="icon-btn" type="button">
-							<img class="icon" src="images/icons/smileicon.png" alt="smile icon" />
-						</button>
-					</div>
+		</article>
 
-					<button class="btn post" type="submit">Post</button>
-
-				</div>
-
-			</form>
-
-			<div id="error"></div>
-
-		</section>
-
-		<!-- OVERLAY now covers ONLY the card/screen area -->
-		<section id="madlib-overlay">
-
-			<article class="card modal-card">
-
-				<div class="head">
-					<div class="avatar"></div>
-
-					<div>
-						<div class="name">Current User</div>
-						<div class="sub">
-							1 min •
-							<img class="mini" src="images/icons/earthicon.png" alt="earth icon" />
-						</div>
-					</div>
-				</div>
-
-				<div id="madlib"></div>
-
-				<div class="post-footer">
-
-					<div class="post-actions">
-						<button id="like-btn" type="button">
-							<span class="heart">♥</span>
-						</button>
-						<span id="like-count">0</span> likes
-					</div>
-
-					<a href="#" id="close">Close</a>
-
-				</div>
-
-			</article>
-
-		</section>
-
-	</div>
+	</section>
 
 </body>
 </html>
