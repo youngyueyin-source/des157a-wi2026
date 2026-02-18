@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Cormorant Garamond', serif;
+    background: radial-gradient(circle at center, #1c1b1a 0%, #0f0f0f 100%);
+    color: #f3f0e8;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+header h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.instruction {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.apothecary {
+    position: relative;
+    height: 70vh;
+    width: 90%;
+    margin: 2rem auto 0 auto;
+}
+
+.plant {
+    position: absolute;
+    width: 180px;
+    height: 220px;
+    /* background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08); */
+    padding: 1rem;
+    transition: 0.4s ease;
+}
+
+.plant:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+/* positioning of plants */
+.nightshade { top: 2%; left: 3%; }
+.oleander   { top: 50%; left: 20%; }
+.lavender   { top: 20%; right: 20%; }
+.lily       { bottom: 15%; left: 40%; }
+.rosary     { bottom: 10%; right: 0%; }
+
+.note {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.plant:hover .note {
+    opacity: 1;
+}
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}

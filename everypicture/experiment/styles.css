@@ -12,7 +12,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  z-index: 3; /* ABOVE everything */
+  z-index: 3;
   font-family: "Just Me Again Down Here", cursive;
   font-size: 3.5em;
 }
