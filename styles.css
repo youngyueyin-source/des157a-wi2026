@@ -6,7 +6,7 @@ body{
     margin: 0;
     font-family: Inter, Arial, sans-serif;
     color: #FFF0F3;
-    background: url("images/apothecarybackground.jpg") center top no-repeat, #0b1411;
+    background: url("images/apothecarybg.jpg") center top no-repeat, #0b1411;
     background-size: cover;
 }
 
@@ -148,10 +148,24 @@ footer a:hover{
 
 
 .clocheoverlay{
+    margin-top: 15px;
     position: absolute;
     left: 49.2%;
     top: -45px;            
     transform: translateX(-50%);
     width: 120%;            
     height: auto;
+}
+
+#oleander {
+    height: 280px;
+    transform: translateY(15%);
+}
+
+#pea{
+    transform: translateY(18%);
+}
+
+.listtext{
+    margin-top: 75px;
 }
