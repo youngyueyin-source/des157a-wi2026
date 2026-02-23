@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Midnight Foraging</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Normalize (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="titleblock">
+      <h1>Midnight Foraging</h1>
+      <p class="instruction">
+        You're in the forest. Move the cursor to use your flashlight. Collect what you find for the apothecary.
+      </p>
+    </div>
+
+    <div class="hud" aria-live="polite">
+      <p class="hud__label">collected</p>
+      <p class="hud__count"><span data-found>0</span>/<span data-total>5</span></p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Scene: background + darkness overlay + plants -->
+    <section class="scene" aria-label="A nighttime forest scene to explore.">
+
+      <!-- Darkness overlay (masked “flashlight”) -->
+      <div class="darkness" aria-hidden="true"></div>
+
+      <!-- Plants layer -->
+      <div class="plants" aria-label="Hidden plants">
+        <!-- Each plant is a button for accessibility + clear interaction -->
+        <button class="plant" type="button"
+          data-plant="nightshade"
+          data-title="Nightshade"
+          data-note="Beautiful, but fatal. Dark berries glisten like something you shouldn't touch. A quiet poison wrapped in velvet petals. Though highly poisonous, it has some medicinal properties."
+          style="--x: 46%; --y: 76%;">
+          <span class="plant__sprite" aria-hidden="true"></span>
+          <span class="sr-only">Inspect Nightshade</span>
+        </button>
+
+        <button class="plant" type="button"
+          data-plant="oleander"
+          data-title="Oleander"
+          data-note="A garden favorite with a hidden temper. Delicate blossoms, deadly roots. This plant is known for it's ability to adapt to the driest climates and for the beauty of it's flowers."
+          style="--x: 22%; --y: 62%;">
+          <span class="plant__sprite" aria-hidden="true"></span>
+          <span class="sr-only">Inspect Oleander</span>
+        </button>
+
+        <button class="plant" type="button"
+          data-plant="lavender"
+          data-title="Lavender"
+          data-note="A sweet scent flirts with your nose. This calms what the body cannot say. Crushed between fingers, it releases a softness the heart has been holding. They release volatile oils known to calm the nervous system and quiet restless thought."
+          style="--x: 72%; --y: 28%;">
+          <span class="plant__sprite" aria-hidden="true"></span>
+          <span class="sr-only">Inspect Lavender</span>
+        </button>
+
+        <button class="plant" type="button"
+          data-plant="lily"
+          data-title="Lily of the Valley"
+          data-note="Innocence with a hidden pulse. Small white bells that ring without sound. Fragile in appearance. Potent beneath. It stands as a symbol of purity, humility, and virtue."
+          style="--x: 8%; --y: 38%;">
+          <span class="plant__sprite" aria-hidden="true"></span>
+          <span class="sr-only">Inspect Lily of the Valley</span>
+        </button>
+
+        <button class="plant" type="button"
+          data-plant="rosary"
+          data-title="Rosary Pea"
+          data-note="Small enough to overlook. Strong enough to end. Beauty contained in a lethal shell. Once strung on string to be used as prayer beads, the seeds contain a highly potent toxin, arbin, that is released when crushed."
+          style="--x: 90%; --y: 78%;">
+          <span class="plant__sprite" aria-hidden="true"></span>
+          <span class="sr-only">Inspect Rosary Pea</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- Slide-over panel for plant details -->
+    <aside class="panel" aria-hidden="true" aria-label="Plant details">
+      <div class="panel__inner" role="dialog" aria-modal="true" aria-label="Plant inspection">
+        <button class="panel__close" type="button" aria-label="Close details">✕</button>
+
+        <p class="panel__eyebrow">field notes</p>
+        <h2 class="panel__title" data-panel-title>—</h2>
+
+        <!-- optional image area (placeholder until you have photos) -->
+        <div class="panel__image" aria-hidden="true"></div>
+
+        <p class="panel__note" data-panel-note>—</p>
+
+        <button class="panel__collect" type="button" data-collect>
+          collect specimen
+        </button>
+
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>Page by Jade Young</p>
+  </footer>
+</body>
+</html>
