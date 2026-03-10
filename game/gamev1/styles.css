@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: url(images/deskbackground.jpg);
+    color: white;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    line-height: 0.8em;
+}
+
+h1 {
+    font-family: "Cinzel", serif;
+}
+
+p {
+    font-family: Arial, sans-serif;
+}
+
+main {
+    width: 1200px;
+    height: 550px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr;
+    gap: 40px;
+    width: 100%;
+}
+
+.player {
+    text-align: center;
+    /* padding: 15px; */
+    /* border: 2px solid #000000;
+    border-radius: 50px;
+    background-image: url(images/redplaid.jpg); */
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bottle {
+    width: 220px;
+    height: 320px;
+    margin: 0px auto 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .liquid {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+
+    background: linear-gradient(
+        to top,
+        #2ecc71,
+        #7dffb2
+    );
+
+    border-top: 2px solid rgba(255, 255, 255, 0.4);
+
+    transition: height 0.4s ease;
+} */
+
+/* potion fill levels color change will be added later */
+
+.fill-0 .liquid {
+    height: 0%;
+}
+
+.fill-10 .liquid {
+    height: 30%;
+}
+
+.fill-20 .liquid {
+    height: 60%;
+}
+
+.fill-30 .liquid {
+    height: 90%;
+}
+
+.score {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.turn {
+    font-size: 24px;
+}
+
+.clover {
+    width: 80px;
+    height: 80px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+}
+
+button:hover {
+    background-color: red;
+    color: antiquewhite;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
