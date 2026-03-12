@@ -160,7 +160,7 @@ const glassBreakSound = new Audio('sounds/broken-glass.wav');
             gameData.roundScore = 0;
 
             //shows a message explaining the unlucky reveal
-            roundMessage.textContent = 'Oh no! You revealed a clover, hence your turn ends.';
+            roundMessage.textContent = 'Oh no! You revealed a three-leaf clover, hence your turn ends.';
 
             //switch to the other player's turn
             switchPlayer();
