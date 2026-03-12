@@ -47,7 +47,7 @@ const glassBreakSound = new Audio('sounds/broken-glass.wav');
 
     //here i get the player's name from session storage
     //if the player didn't enter a name, it defaults to "Player One"
-    const savedName = sessionStorage.getItem('playerOneName') || 'Player One';
+    const savedName = sessionStorage.getItem('playerOneName') || 'Junior Alchemist';
 
     //this updates the heading on the page with the player's actual name
     playerOneNameHeading.textContent = savedName;
@@ -279,7 +279,7 @@ const glassBreakSound = new Audio('sounds/broken-glass.wav');
             victorySound.play();
 
             //updates the text to show the winner
-            turnMessage.innerHTML = `HUZZAH!<br>${gameData.players[gameData.currentPlayer].toUpperCase()} WINS!`;
+            turnMessage.innerHTML = `HUZZAH!<br>${gameData.players[gameData.currentPlayer].toUpperCase()} TRIUMPHS!`;
             roundMessage.textContent = `${gameData.players[gameData.currentPlayer]} reached ${gameData.scores[gameData.currentPlayer]} points.`;
 
             //hides the rule text in the header once the game is over cause it looked too busy
