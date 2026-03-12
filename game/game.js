@@ -68,8 +68,8 @@ const glassBreakSound = new Audio('sounds/broken-glass.wav');
         //0 = player one, 1 = rival alchemist
         currentPlayer: 0,
 
-        //once someone reaches 30 points they win
-        gameEnd: 30,
+        //once someone reaches 50 points they win
+        gameEnd: 50,
 
         //stops the game once a winner is declared
         gameOver: false
@@ -258,7 +258,10 @@ const glassBreakSound = new Audio('sounds/broken-glass.wav');
 
     function getFillClass(score) {
 
-        //this determines which fill class the bottle should use
+        if (score >= 50) return 'fill-50';
+        if (score >= 45) return 'fill-45';
+        if (score >= 40) return 'fill-40';
+        if (score >= 35) return 'fill-35';
         if (score >= 30) return 'fill-30';
         if (score >= 25) return 'fill-25';
         if (score >= 20) return 'fill-20';
@@ -277,6 +280,12 @@ const glassBreakSound = new Audio('sounds/broken-glass.wav');
             //plays the victory fanfare sound when someone wins
             victorySound.currentTime = 0;
             victorySound.play();
+
+            const winningBottle = document.querySelector(
+            gameData.currentPlayer === 0 ? '#bottle-one' : '#bottle-two'
+        );
+
+winningBottle.classList.add('potion-win');
 
             //updates the text to show the winner
             turnMessage.innerHTML = `HUZZAH!<br>${gameData.players[gameData.currentPlayer].toUpperCase()} TRIUMPHS!`;

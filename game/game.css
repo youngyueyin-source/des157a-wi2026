@@ -141,33 +141,27 @@ nav {
     overflow: hidden;
 }
 
-.fill-0 .liquid  { 
-    height: 0px; 
-}
+.fill-0  .liquid { height: 0px; }
 
-.fill-5 .liquid  { 
-    height: 35px; 
-}
+.fill-5  .liquid { height: 20px; }
 
-.fill-10 .liquid { 
-    height: 70px; 
-}
+.fill-10 .liquid { height: 40px; }
 
-.fill-15 .liquid { 
-    height: 105px; 
-}
+.fill-15 .liquid { height: 60px; }
 
-.fill-20 .liquid { 
-    height: 140px; 
-}
+.fill-20 .liquid { height: 80px; }
 
-.fill-25 .liquid { 
-    height: 175px; 
-}
+.fill-25 .liquid { height: 100px; }
 
-.fill-30 .liquid { 
-    height: 210px; 
-}
+.fill-30 .liquid { height: 120px; }
+
+.fill-35 .liquid { height: 140px; }
+
+.fill-40 .liquid { height: 160px; }
+
+.fill-45 .liquid { height: 180px; }
+
+.fill-50 .liquid { height: 200px; }
 
 .score {
     margin-top: -15px;
@@ -216,13 +210,13 @@ nav {
 
 .liquid {
     position: absolute;
-    left: 24px;
-    bottom: 18px;
-    width: 100px;
+    left: 26px;
+    bottom: 22px;
+    width: 95px;
     height: 0%;
-    max-height: 195px;
+    max-height: 188px;
     background: linear-gradient(to top, #494cff, #8800ff, #e08bff);
-    border-radius: 0 0 30px 30px;
+    border-radius: 6px 6px 25px 25px;
     z-index: 1;
     transition: height 0.4s ease;
 }
@@ -373,4 +367,22 @@ footer p {
     background: rgba(255,255,255,0.5);
     transform: rotate(-5deg);
     border-radius: 1px;
+}
+
+@keyframes potionGlow {
+    0% {
+        filter: drop-shadow(0 0 0px #e08bff);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 18px #e08bff);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 0px #e08bff);
+    }
+}
+
+.potion-win {
+    animation: potionGlow 1.5s ease-in-out infinite;
 }
