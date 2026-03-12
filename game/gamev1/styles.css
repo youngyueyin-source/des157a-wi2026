@@ -4,7 +4,8 @@
 
 body {
     font-family: "Inter", sans-serif;
-    background: url(images/deskbackground.jpg);
+    /* background: url(images/deskbackground.jpg); */
+    background-color: black;
     color: white;
     margin: 0;
 }
@@ -123,7 +124,7 @@ button {
 }
 
 button:hover {
-    background-color: red;
+    background-color: rgb(219, 138, 241);
     color: antiquewhite;
 }
 
@@ -131,4 +132,19 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 14px;
+}
+
+.pagecolor1 {
+    background-color: black;
+    transition: all 2s;
+}
+
+.pagecolor2 {
+    background-color: #3fb53b;
+    transition: all 1s;
+}
+
+.pagecolor3 {
+    background-color: #950909;
+    transition: all 1s;
 }

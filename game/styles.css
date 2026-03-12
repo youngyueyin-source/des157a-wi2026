@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("images/deskbackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:450px;
+    color: rgb(254, 254, 240);
+}
+
+.landing {
+    margin-top: 80px;
+}
+
+h2 {
+    color: rgb(254, 254, 240);
+    margin-top: 90px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.8em;
+}
+
+#startgame button {
+    margin-top: 15px;
+    padding: 14px 32px;
+    font-size: 1.2em;
+    font-family: "Cinzel", serif;
+    letter-spacing: 0.05em;
+
+    color: #fdf6e3;
+    background: linear-gradient(145deg, #8f10ff, #674dff);
+
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.4);
+
+    transition: all 0.25s ease;
+}
+
+#startgame button:hover {
+    background: linear-gradient(145deg, #38096f, #3d17ff);
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+.floating-banner {
+    margin-top: -20px;
+    width: 650px;
+    height: 400px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay-card {
+    width: 100%;
+    max-width: 520px;
+    background: rgba(34, 24, 18, 0.96);
+    border-radius: 18px;
+    padding: 30px;
+    color: rgb(254, 254, 240);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.overlay-card h2 {
+    margin-top: 0;
+    font-family: "Cinzel", serif;
+    font-size: 2em;
+    color:aliceblue;
+}
+
+.overlay-card p {
+    line-height: 1.6em;
+    margin-bottom: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1em;
+
+}
+
+.overlay-card label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2em;
+    color: aliceblue;
+}
+
+.overlay-card input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.overlay-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.overlay-buttons button {
+    padding: 12px 24px;
+    font-size: 1em;
+    font-family: "Cinzel", serif;
+
+    color: #fdf6e3;
+    background: linear-gradient(145deg, #8f10ff, #674dff);
+
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.2);
+
+    transition: all 0.25s ease;
+}
+
+.overlay-buttons button:hover {
+    background: linear-gradient(145deg, #38096f, #3d17ff);
+    transform: translateY(-2px);
+}

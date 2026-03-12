@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apothecary Academy</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="game.css">
+    <script src="game.js" defer></script>
+</head>
+
+<body class="pagecolor1">
+    <div id="background">
+        <header>
+            <img src="images/academybanner.png" alt="Illustrated academy banner" class="floating-banner">
+
+            <p id="header-rule">
+                First scholar to reach 30 points wins.
+            </p>
+        </header>
+
+        <main>
+            <section class="board">
+                <article class="player">
+                    <h2 id="player-one-name">Player One</h2>
+
+                    <div class="bottle fill-0" id="bottle-one" aria-label="Potion bottle showing brewing progress">
+                        <div class="liquid"></div>
+                        <img src="images/emptypotion.png" width="150" height="300" alt="empty potion bottle" class="potion-img">
+                    </div>
+
+                    <div class="totalscore-label">
+                        <p>Total Brew Score:</p>
+                    </div>
+
+                    <p class="score" id="score-one">0</p>
+
+                    <img src="images/clover.png" width="70" height="70" alt="lucky four-leaf clover indicating whose turn it is" class="clover active-turn" id="clover-one">
+                </article>
+
+                <section class="controls">
+                    <div class="dice-area">
+                        <p id="turn-message">Player One's turn</p>
+
+                        <div class="dice-row">
+                            <div class="die" id="die-one"></div>
+                            <div class="die" id="die-two"></div>
+                        </div>
+
+                        <p id="round-message">Reveal a card to begin brewing.</p>
+                    </div>
+
+                    <nav>
+                        <button id="roll-btn">Reveal</button>
+                        <button id="hold-btn">Hold</button>
+                        <button id="play-again-btn">Play Again</button>
+                    </nav>
+                </section>
+
+                <article class="player">
+                    <h2>Rival Alchemist</h2>
+
+                    <div class="bottle fill-0" id="bottle-two" aria-label="Potion bottle showing brewing progress">
+                        <div class="liquid"></div>
+                        <img src="images/emptypotion.png" width="150" height="300" alt="empty potion bottle" class="potion-img">
+                    </div>
+
+                    <div class="totalscore-label">
+                        <p>Total Brew Score:</p>
+                    </div>
+
+                    <p class="score" id="score-two">0</p>
+
+                    <img src="images/clover.png" width="70" height="70" alt="lucky four-leaf clover indicating whose turn it is" class="clover" id="clover-two">
+                </article>
+            </section>
+        </main>
+
+        <div class="dice-legend">
+
+            <p><span class="legend-symbol">☘︎</span> = 1</p>
+            <p><span class="legend-symbol">🀣</span> = 2</p>
+            <p><span class="legend-symbol">🀦</span> = 3</p>
+
+            <p><span class="legend-symbol">🀧</span> = 4</p>
+            <p><span class="legend-symbol">🀨</span> = 5</p>
+            <p><span class="legend-symbol">🀥</span> = 6</p>
+        </div>
+
+        <footer>
+            <p>Game by Jade Young</p>
+        </footer>
+    </div>
+</body>
+</html>

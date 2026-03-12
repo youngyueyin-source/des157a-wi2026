@@ -17,71 +17,72 @@
 </head>
 
 <body>
+    <div id="background">
 
-    <header>
-        <h1>Apothecary Academy</h1>
-        <p>brew wisely. first player to reach 30 points wins.</p>
-        <p>avoid rolling ones. especially avoid double ones for snake eyes will destroy your potion!</p>
-    </header>
+        <header>
+            <h1>Apothecary Academy</h1>
+            <p>brew wisely. first player to reach 30 points wins.</p>
+            <p>avoid rolling ones. especially avoid double ones for snake eyes will destroy your potion!</p>
+        </header>
 
-    <main>
+        <main>
 
-        <section class="board">
+            <section class="board">
 
-            <article class="player">
+                <article class="player">
 
-                <h2>player one</h2>
+                    <h2>player one</h2>
 
-                <div class="bottle fill-0" aria-label="Potion bottle showing brewing progress">
+                    <div class="bottle fill-0" aria-label="Potion bottle showing brewing progress">
 
-                    <div class="liquid"></div>
+                        <div class="liquid"></div>
 
-                    <img src="images/emptypotion.png" width="190" height="320" alt="empty potion bottle" class="potion-img">
+                        <img src="images/emptypotion.png" width="190" height="320" alt="empty potion bottle" class="potion-img">
 
-                </div>
+                    </div>
 
-                <p>total brew score:</p>
-                <p class="score">0</p>
+                    <p>total brew score:</p>
+                    <p class="score">0</p>
 
-                <img src="images/clover.png" width="80" height="80" alt="lucky four-leaf clover indicating whose turn it is" class="clover">
+                    <img src="images/clover.png" width="80" height="80" alt="lucky four-leaf clover indicating whose turn it is" class="clover">
 
-            </article>
+                </article>
 
 
-            <section class="controls">
+                <section class="controls">
 
-                <nav>
-                    <button>Roll</button>
-                    <button>Hold</button>
-                </nav>
+                    <nav>
+                        <div id="box1"><button>Roll</button></div>
+                        <div id="box2"><button>Hold</button></div>
+                    </nav>
+
+                </section>
+
+                <article class="player">
+
+                    <h2>player two</h2>
+
+                    <div class="bottle fill-0" aria-label="Potion bottle showing brewing progress">
+
+                        <div class="liquid"></div>
+
+                        <img src="images/emptypotion.png" width="190" height="320" alt="empty potion bottle" class="potion-img">
+
+                    </div>
+
+                    <p>total brew score:</p>
+                    <p class="score">0</p>
+                    
+                </article>
 
             </section>
 
-            <article class="player">
+        </main>
 
-                <h2>player two</h2>
-
-                <div class="bottle fill-0" aria-label="Potion bottle showing brewing progress">
-
-                    <div class="liquid"></div>
-
-                    <img src="images/emptypotion.png" width="190" height="320" alt="empty potion bottle" class="potion-img">
-
-                </div>
-
-                <p>total brew score:</p>
-                <p class="score">0</p>
-                
-            </article>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>HTML and CSS only</p>
-    </footer>
-
+        <footer>
+            <p>Page by Jade Young</p>
+        </footer>
+    </div>
 </body>
 
 </html>
